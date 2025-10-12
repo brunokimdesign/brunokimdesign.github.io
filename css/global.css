@@ -15,6 +15,7 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
+    flex-direction: row;
 }
 
 /* ===== Sidebar Navigation ===== */
@@ -28,6 +29,8 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
 }
 
 .logo {
@@ -98,6 +101,7 @@ nav {
     margin-left: 210px;
     flex: 1;
     padding: 60px;
+    transition: margin-left 0.3s;
 }
 
 .page-title {
@@ -128,21 +132,28 @@ nav {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
+
+    /* Hamburger menu button */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1100;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .hamburger span {
+            display: block;
+            height: 4px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+    /* Sidebar hidden by default on mobile */
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        flex-direction: row;
-        padding: 20px;
-        flex-wrap: wrap;
-    }
-
-    .main {
-        margin-left: 0;
-        padding: 30px 20px;
-    }
-
-    .page-title {
-        font-size: 32px;
-    }
-}
