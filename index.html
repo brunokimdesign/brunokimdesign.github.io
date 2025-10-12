@@ -100,11 +100,12 @@
     </style>
 </head>
 <body>
-    <div class="hamburger" id="hamburger">
+    <button class="hamburger-toggle" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+    </button>
+    <div class="sidebar-overlay" onclick="toggleMenu()"></div>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">Portfolio</div>
@@ -196,12 +197,25 @@
 
         initializePortfolio();
 
-        const hamburger = document.getElementById('hamburger');
+        function toggleMenu() {
+        const hamburger = document.querySelector('.hamburger-toggle');
         const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.sidebar-overlay');
 
-        hamburger.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
+        hamburger.classList.toggle('active');
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    }
+
+    // Close menu when a navigation link is clicked
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            toggleMenu();
+        }
         });
+    });
     </script>
 </body>
 </html>
