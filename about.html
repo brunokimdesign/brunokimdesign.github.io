@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>About - Portfolio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        .about-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+            .about-content p {
+                margin-bottom: 20px;
+            }
+
+        .skills-section {
+            margin-top: 60px;
+        }
+
+            .skills-section h3 {
+                font-size: 24px;
+                margin-bottom: 30px;
+                color: #333;
+                font-weight: 400;
+            }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 900px;
+        }
+
+        .skill-category strong {
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .skill-category p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Portfolio</div>
+            <div class="logo-subtitle">Creative Developer</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="logout" onclick="handleLogout()">Logout</div>
+        </aside>
+
+        <main class="main">
+            <h1 class="page-title">About</h1>
+
+            <div class="about-content">
+                <p>I'm a Creative Developer with a passion for bridging the gap between design and technology. With expertise in both graphic design and full-stack web development, I create digital experiences that are not only visually compelling but also functionally robust and user-centric.</p>
+
+                <p>My approach combines strategic thinking with hands-on execution. Whether designing brand identities, crafting intuitive interfaces, or building scalable web applications, I bring the same attention to detail and commitment to excellence to every project.</p>
+
+                <p>I believe the best solutions emerge when creativity meets technical precision. I thrive in collaborative environments where I can contribute both creative direction and technical implementation.</p>
+            </div>
+
+            <div class="skills-section">
+                <h3>Skills & Expertise</h3>
+                <div class="skills-list">
+                    <div class="skill-category">
+                        <strong>Design</strong>
+                        <p>Branding, UI/UX Design, Visual Identity, Packaging, Editorial Design</p>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Web Development</strong>
+                        <p>React, JavaScript, HTML/CSS, Full-stack Development, Web Performance</p>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools & Software</strong>
+                        <p>Figma, Adobe Creative Suite, Blender, VS Code, Git</p>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Additional Skills</strong>
+                        <p>Project Management, Prototyping, Responsive Design, API Integration</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

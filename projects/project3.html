@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>About - Portfolio</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        .back-button {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 40px;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+
+            .back-button:hover {
+                color: #333;
+            }
+
+        .page-subtitle {
+            max-width: 800px;
+        }
+
+        /* Image Gallery Grid (you can keep this if needed) */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        /* ✅ Make all media (images + videos) scale responsively within browser window */
+        .space-y-8 img,
+        .space-y-8 video {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 90vh; /* prevents media from being taller than the viewport */
+            object-fit: contain; /* ensures the whole image/video fits inside */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+        }
+
+        /* Optional: center and add breathing room */
+        .space-y-8 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .space-y-8 img,
+            .space-y-8 video {
+                max-height: 70vh; /* slightly smaller for mobile */
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">Portfolio</div>
+            <div class="logo-subtitle">Creative Developer</div>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../about.html" class="active">About</a>
+                <a href="../projects.html">Projects</a>
+                <a href="../contact.html">Contact</a>
+            </nav>
+            <div class="logout" onclick="handleLogout()">Logout</div>
+        </aside>
+
+        <main class="main">
+            <div class="max-w-5xl mx-auto px-12 py-16">
+                <!-- Project Header -->
+                <div class="mb-16">
+                    <div class="flex items-center gap-3 text-sm text-neutral-500 mb-4">
+                        <span>Editorial</span>
+                        <span>•</span>
+                        <span>2024</span>
+                    </div>
+                    <h1 class="text-5xl font-light mb-6 leading-tight">Positivo Brasil</h1>
+                    <p class="text-xl text-neutral-600 leading-relaxed max-w-3xl">Created a prize booth inspired by cash booths for Positivo Brasil’s promotional events.</p>
+                </div>
+
+                <!-- Project Images -->
+                <div class="space-y-8">
+
+                    <div class="w-full">
+                        <img src="../portfolio-assets/Positivo Brasil/frente com modelo.png?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Editorial Magazine Layout" class="w-full rounded-lg shadow-lg">
+                    </div>
+
+                    <div class="w-full">
+                        <img src="../portfolio-assets/Positivo Brasil/frente.png?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Editorial Magazine Layout" class="w-full rounded-lg shadow-lg">
+                    </div>
+
+                    <div class="w-full">
+                        <img src="../portfolio-assets/Positivo Brasil/lateral com a porta aberta.png?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Editorial Magazine Layout" class="w-full rounded-lg shadow-lg">
+                    </div>
+
+                    <div class="w-full">
+                        <img src="../portfolio-assets/Positivo Brasil/lateral.png?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Editorial Magazine Layout" class="w-full rounded-lg shadow-lg">
+                    </div>
+
+                    <div class="w-full">
+                        <video src="../portfolio-assets/Positivo Brasil/Positivo Brasil - Animação.mp4"
+                               controls
+                               class="w-full rounded-lg shadow-lg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="mt-16 pt-8 border-t border-neutral-200">
+                    <a href="../projects.html" class="inline-flex items-center gap-2 px-6 py-3 bg-neutral-900 text-white rounded-md hover:bg-neutral-800 transition-colors">
+                        ← Back to Projects
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
