@@ -277,6 +277,11 @@
     </style>
 </head>
 <body>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">Portfolio</div>
@@ -344,11 +349,18 @@
                 text-decoration: none;
             }
 
-            a:hover {
-                color: #555;
-            }
+                a:hover {
+                    color: #555;
+                }
         </style>
     </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.querySelector('.sidebar');
 
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

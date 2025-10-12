@@ -100,6 +100,11 @@
     </style>
 </head>
 <body>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">Portfolio</div>
@@ -131,8 +136,8 @@
     </div>
 
     <script>
-        
-        const projects = [            
+
+        const projects = [
             {
                 id: 1,
                 title: 'Carnatal',
@@ -191,6 +196,12 @@
 
         initializePortfolio();
 
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.querySelector('.sidebar');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
     </script>
 </body>
 </html>
